@@ -101,9 +101,11 @@
   li {
     font-size: 2rem;
     margin: 0.5rem 2rem 0.5rem 0;
+    color: $font-color-secondary;
+    transition: all 0.5s;
 
     &:hover {
-      color: $font-color-secondary;
+      color: $font-color-primary;
       cursor: pointer;
     }
   }
