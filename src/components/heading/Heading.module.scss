@@ -1,0 +1,23 @@
+@import "/src/sass/base";
+
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.outer-wrapper {
+  width: 75rem;
+  padding-left: 2rem;
+}
+
+.heading-wrapper {
+  background-color: $background-color-primary;
+  margin-top: $margin-medium;
+  font-size: 1.8rem;
+  color: $font-color-primary;
+  padding: 1rem 3rem 1rem 2rem;
+  border-top-left-radius: 7.5px;
+  border-top-right-radius: 7.5px;
+  display: inline-block;
+}

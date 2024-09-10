@@ -1,0 +1,12 @@
+@import "/src/sass/base";
+
+.wrapper {
+  width: 100%;
+}
+
+.heading {
+  color: $font-color-tertiary;
+  font-size: 3rem;
+  text-align: center;
+  margin: $margin-medium 0;
+}

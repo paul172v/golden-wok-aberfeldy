@@ -1,0 +1,29 @@
+@import "/src/sass/base";
+
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.outer-wrapper {
+  width: 75rem;
+  padding-left: 2rem;
+}
+
+.item-wrapper {
+  margin-top: $margin-tiny;
+  font-size: 1.6rem;
+  color: $font-color-quaternary;
+}
+
+.item {
+  font-size: 2.2rem;
+}
+
+.description {
+  color: $font-color-quinary;
+  font-size: 1.8rem;
+  margin-top: 0.25rem;
+  padding-left: 2.5rem;
+}

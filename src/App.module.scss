@@ -1,0 +1,122 @@
+@import "/src/sass/base";
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: $background-color-primary;
+  color: $font-color-primary;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+
+  .margin {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1920px;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      padding: $margin-small;
+      font-size: 2.4rem;
+    }
+
+    .u-icon {
+      margin: 0 1rem;
+      font-size: 4rem;
+    }
+
+    .u-text-col {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+    }
+
+    .u-yellow {
+      color: $font-color-secondary;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li,
+      a {
+        margin-right: $margin-small;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.category-nav-wrapper {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  margin-top: $margin-medium;
+
+  .category-nav-wrapper--box {
+    background-color: $background-color-primary;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+  }
+
+  .heading {
+    color: $font-color-primary;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: $margin-small;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75rem;
+    flex-wrap: wrap;
+    color: $font-color-primary;
+  }
+
+  li {
+    font-size: 2rem;
+    margin: 0.5rem 2rem 0.5rem 0;
+
+    &:hover {
+      color: $font-color-secondary;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .margin {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+  .title-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

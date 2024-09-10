@@ -1,0 +1,74 @@
+@import "/src/sass/base";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dancing-script-font {
+  font-family: "Dancing Script", cursive;
+  font-size: 125%;
+}
+
+a {
+  color: $font-color-primary;
+  text-decoration: none;
+  transition: all 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    color: $font-color-secondary;
+  }
+}
+
+.u-row {
+  display: flex;
+  align-items: center;
+}
+
+.list-marker {
+  font-size: 1.6rem;
+  margin-right: 1.5rem;
+}
+
+.list-marker--letter {
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+}
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50rem;
+  width: 80%;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 2px solid $background-color-primary;
+}
+
+#map h2 {
+  margin-top: -1rem;
+  color: white;
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 30%;
+  }
+}

@@ -1,0 +1,9 @@
+@import "/src/sass/colors";
+
+@mixin box-filled {
+  background-color: $background-color-primary;
+  border: 4px solid $background-color-secondary;
+  padding: 1rem 2rem;
+  color: $font-color-primary;
+  box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.39);
+}

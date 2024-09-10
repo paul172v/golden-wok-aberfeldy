@@ -1,0 +1,80 @@
+@import "/src/sass/base";
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin-top: 2rem;
+  }
+}
+
+.link-purple,
+.icon {
+  font-size: 2rem;
+  color: $font-color-tertiary;
+  margin-right: 1rem;
+}
+
+.icon {
+  transform: translateY(1rem);
+}
+
+.notice {
+  font-size: 2rem;
+  margin-top: $margin-small;
+  font-weight: 800;
+}
+
+.request {
+  font-size: 1.6rem;
+  width: 40rem;
+  margin-top: $margin-tiny;
+}
+
+.allergen-warning {
+  font-size: 2rem;
+  margin-top: $margin-small;
+  color: $font-color-quinary;
+  text-transform: uppercase;
+}
+
+.opening-hours-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: $margin-medium;
+  background-color: $background-color-primary;
+  padding: 1rem 3rem 2rem 3rem;
+  border-radius: 4px;
+
+  .opening-hours--bold,
+  .opening-hours--white,
+  .opening-hours--yellow {
+    margin-top: $margin-tiny;
+    // text-transform: uppercase;
+    font-size: 2rem;
+  }
+
+  .opening-hours--bold {
+    color: $font-color-secondary;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .opening-hours--white {
+    font-size: 2rem;
+    color: $font-color-primary;
+  }
+  .opening-hours--yellow {
+    color: $font-color-secondary;
+    margin-bottom: $margin-small;
+  }
+
+  .opening-hours--address {
+    color: $font-color-primary;
+    font-size: 2rem;
+  }
+}

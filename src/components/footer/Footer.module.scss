@@ -1,0 +1,26 @@
+@import "/src/sass/base";
+
+.footer {
+  background-color: $background-color-primary;
+  color: $font-color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  padding: 0 4rem;
+  margin-top: $margin-large;
+  color: $font-color-primary;
+}
+
+.copyright {
+  font-size: 2rem;
+}
+
+.icon {
+  font-size: 3rem;
+
+  &:hover {
+    cursor: pointer;
+    color: $font-color-secondary;
+  }
+}
