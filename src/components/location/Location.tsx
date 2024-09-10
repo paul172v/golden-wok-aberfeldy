@@ -19,7 +19,7 @@ const Location = () => {
   const positionGoldenWok = new LatLng(56.621802, -3.865618);
 
   const goldenWokIcon = new L.Icon({
-    iconUrl: "/src/assets/marker-icon.png",
+    iconUrl: "/marker-icon.png",
     iconSize: [30, 40], // Size of the icon
     iconAnchor: [20, 20], // Point of the icon which will correspond to marker's location
     popupAnchor: [1, -34], // Point from which the popup should open relative to the iconAnchor
