@@ -253,7 +253,7 @@ export const chickenDishesArr = [
     number: 72,
     name: "Chicken Maryland",
     description:
-      "Chicken Breast, Ham, Pancake Roll, Banana Fritter, Pineapple Fritter & Chips",
+      "(Chicken Breast, Ham, Pancake Roll, Banana Fritter, Pineapple Fritter & Chips)",
     quantity: null,
     price: 10.5,
   },

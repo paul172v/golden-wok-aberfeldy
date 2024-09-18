@@ -8,7 +8,7 @@
 
 .outer-wrapper {
   width: 75rem;
-  padding-left: 2rem;
+  margin-left: -2rem;
 }
 
 .item-wrapper {
@@ -19,11 +19,51 @@
 
 .item {
   font-size: 2.2rem;
+
+  &--single {
+    font-size: 2.2rem;
+    padding-left: 2rem;
+  }
+
+  &--double {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+  }
 }
 
 .description {
   color: $font-color-quinary;
   font-size: 1.8rem;
   margin-top: 0.25rem;
-  padding-left: 2.5rem;
+  padding-left: 5rem;
+}
+
+.number-gap--single-digit {
+  padding-right: 1rem;
+}
+
+@media (max-width: 490px) {
+  .item--double,
+  .item--single,
+  .item {
+    font-size: 2rem;
+  }
+
+  .item--single {
+    padding-left: 1rem;
+  }
+
+  .item--double {
+    padding-left: 0.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-left: -1rem;
+  }
+
+  .outer-wrapper {
+    width: 75rem;
+    margin-left: 0.5rem;
+  }
 }

@@ -49,7 +49,8 @@ function App() {
         <div className={classes.margin}>
           <div className={classes["title-wrapper"]}>
             <h2>
-              <span className="dancing-script-font">Golden</span> Wok -{" "}
+              <span className="dancing-script-font">Golden</span>{" "}
+              <span className={classes.wok}>Wok -</span>{" "}
               <span className={classes["u-yellow"]}>Chinese Takeaway</span>
             </h2>
 
@@ -59,7 +60,7 @@ function App() {
             <span className={classes["u-text-col"]}>金锅</span>
           </div>
 
-          <nav>
+          <nav className={classes["page-nav-wrapper"]}>
             <ul>
               <li>
                 <Link
@@ -319,7 +320,7 @@ function App() {
               number={item.number}
               name={item.name}
               price={item.price}
-              key={item.number}
+              key={item.number + item.name}
             />
           );
         } else {
@@ -329,7 +330,7 @@ function App() {
               name={item.name}
               quantity={item.quantity}
               price={item.price}
-              key={item.number}
+              key={item.number + item.name}
             />
           );
         }
@@ -344,7 +345,7 @@ function App() {
             number={item.number}
             name={item.name}
             price={item.price}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -358,7 +359,8 @@ function App() {
             number={item.number}
             name={item.name}
             price={item.price}
-            key={item.number}
+            description={item.description}
+            key={item.number + item.name}
           />
         );
       })}
@@ -372,7 +374,7 @@ function App() {
             number={item.number}
             name={item.name}
             price={item.price}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -387,7 +389,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -402,7 +404,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -417,7 +419,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -432,7 +434,8 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            description={item.description}
+            key={item.number + item.name}
           />
         );
       })}
@@ -447,7 +450,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -462,7 +465,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -477,7 +480,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -492,7 +495,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -507,7 +510,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -522,7 +525,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -537,7 +540,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -552,7 +555,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -567,7 +570,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -582,7 +585,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}
@@ -597,7 +600,7 @@ function App() {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
-            key={item.number}
+            key={item.number + item.name}
           />
         );
       })}

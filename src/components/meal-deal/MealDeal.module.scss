@@ -42,3 +42,9 @@
     text-align: center;
   }
 }
+
+@media (max-width: 490px) {
+  .box-wrapper {
+    max-width: 97.5vw;
+  }
+}

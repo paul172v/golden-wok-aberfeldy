@@ -35,3 +35,17 @@
     width: 75rem;
   }
 }
+
+@media (max-width: 490px) {
+  .box-wrapper {
+    max-width: 97.5vw;
+
+    .description {
+      line-height: 1.75rem;
+    }
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+}

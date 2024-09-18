@@ -72,3 +72,9 @@ a {
     font-size: 28%;
   }
 }
+
+@media (max-width: 490px) {
+  .dancing-script-font {
+    font-size: 200%;
+  }
+}

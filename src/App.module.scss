@@ -125,3 +125,27 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 490px) {
+  .wok,
+  .u-yellow {
+    font-size: 150%;
+  }
+
+  .u-icon {
+    font-size: 600% !important;
+  }
+  .u-text-col {
+    font-size: 300% !important;
+  }
+
+  .page-nav-wrapper {
+    ul {
+      li {
+        a {
+          font-size: 150%;
+        }
+      }
+    }
+  }
+}

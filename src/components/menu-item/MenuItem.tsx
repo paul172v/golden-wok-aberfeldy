@@ -5,25 +5,27 @@ interface IProps {
   name: string;
   quantity?: number | null;
   price: number;
-  description?: string;
+  description?: string | null;
 }
 
 const MenuItem = (props: IProps) => {
-  //// Adjusting the padEnd dots according to the string length of the name and quantity
-  const nameLength = props.name.length;
-  let quantityLength = 0;
+  //// Adjusting the padEnd dots according to the number and price
+  let dotLength;
+  dotLength = 55;
+  props.number < 10 && dotLength;
+  props.number === 46 && dotLength++;
+  props.number >= 100 && dotLength;
+  props.number >= 107 && dotLength++;
+  props.number >= 123 && dotLength--;
+  props.price > 9 && dotLength--;
 
-  if (props.quantity && props.quantity < 10) {
-    quantityLength = 3;
-  }
+  //// Selecting item class based on item number (the padding will align the menu items)
+  let itemClass;
+  if (props.number < 10) itemClass = "item--single";
+  if (props.number >= 10 && props.number < 100) itemClass = "item--double";
+  if (props.number >= 100) itemClass = "item";
 
-  if (props.quantity && props.quantity >= 10) {
-    quantityLength = 4;
-  }
-
-  const stringLength = nameLength + quantityLength;
-
-  //// Accounting for letter markers next to the item number
+  //// Adjusting padding for letter markers a,b,c, next to the item number
   let spanNumberElement = <span className="list-marker">{props.number}.</span>;
 
   if (
@@ -52,25 +54,33 @@ const MenuItem = (props: IProps) => {
       <div className={classes["outer-wrapper"]}>
         <div className={classes["item-wrapper"]}>
           {props.quantity ? (
-            <p className={classes.item}>
-              <span className="list-marker">{props.number}.</span>
-              {`${props.name} ${`(${props.quantity})`}`.padEnd(
-                115 - stringLength,
-                "."
-              )}
-              {`£6.50`}
-            </p>
+            <pre>
+              <p className={classes[`${itemClass}`]}>
+                <span className="list-marker">{props.number}.</span>
+
+                {`${props.name} ${`(${props.quantity})`}`.padEnd(
+                  dotLength,
+                  "."
+                )}
+
+                {`£${props.price.toFixed(2)}`}
+              </p>
+            </pre>
           ) : (
-            <p className={classes.item}>
-              {spanNumberElement}
-              {`${props.name}`.padEnd(115 - stringLength, ".")}
-              {`£${props.price.toFixed(2)}`}
-            </p>
+            <pre>
+              <p className={classes[`${itemClass}`]}>
+                {spanNumberElement}
+                {`${props.name}`.padEnd(dotLength, ".")}
+                {`£${props.price.toFixed(2)}`}
+              </p>
+            </pre>
           )}
 
-          {props.description && (
-            <p className={classes.description}>{props.description}</p>
-          )}
+          {props.description &&
+            props.description !== null &&
+            props.description !== undefined && (
+              <p className={classes.description}>{props.description}</p>
+            )}
         </div>
       </div>
     </div>

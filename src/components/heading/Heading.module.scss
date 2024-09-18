@@ -8,7 +8,7 @@
 
 .outer-wrapper {
   width: 75rem;
-  padding-left: 2rem;
+  margin-left: -2rem;
 }
 
 .heading-wrapper {
@@ -20,4 +20,10 @@
   border-top-left-radius: 7.5px;
   border-top-right-radius: 7.5px;
   display: inline-block;
+}
+
+@media (max-width: 490px) {
+  .outer-wrapper {
+    margin-left: 1rem;
+  }
 }
