@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className={classes.page}>
-      <Element name="section-contact"></Element>
+      <Element name="section-contact" id="section-contact"></Element>
       <div className={classes.header}>
         <div className={classes.margin}>
           <div className={classes["title-wrapper"]}>
@@ -106,7 +106,7 @@ function App() {
 
       <nav className={classes["category-nav-wrapper"]}>
         <div className={classes["category-nav-wrapper--box"]}>
-          <Element name="section-menu">
+          <Element name="section-menu" id="section-menu">
             <h2 className={classes.heading}>Menu Navigation</h2>
           </Element>
           <ul>
@@ -310,7 +310,7 @@ function App() {
         listItem2={crispyAromaticDuck.listItem2}
         listItem3={crispyAromaticDuck.listItem3}
       />
-      <Element name="starters">
+      <Element name="starters" id="starters">
         <Heading heading="Starters" />
       </Element>
       {startersArr.map((item) => {
@@ -336,7 +336,7 @@ function App() {
         }
       })}
 
-      <Element name="dim-sum">
+      <Element name="dim-sum" id="dim-sum">
         <Heading heading="Dim Sum" />
       </Element>
       {dimSumArr.map((item) => {
@@ -350,7 +350,7 @@ function App() {
         );
       })}
 
-      <Element name="salt-pepper">
+      <Element name="salt-pepper" id="salt-pepper">
         <Heading heading="Salt & Pepper Dishes" />
       </Element>
       {saltAndPepperDishesArr.map((item) => {
@@ -365,7 +365,7 @@ function App() {
         );
       })}
 
-      <Element name="soups">
+      <Element name="soups" id="soups">
         <Heading heading="Soups" />
       </Element>
       {soupsArr.map((item) => {
@@ -379,7 +379,7 @@ function App() {
         );
       })}
 
-      <Element name="sweet-sour">
+      <Element name="sweet-sour" id="sweet-sour">
         <Heading heading="Sweet & Sour Dishes" />
       </Element>
       {sweetAndSourDishesArr.map((item) => {
@@ -394,7 +394,7 @@ function App() {
         );
       })}
 
-      <Element name="curry">
+      <Element name="curry" id="curry">
         <Heading heading="Curry Dishes" />
       </Element>
       {curryDishesArr.map((item) => {
@@ -409,7 +409,7 @@ function App() {
         );
       })}
 
-      <Element name="thai-curry">
+      <Element name="thai-curry" id="thai-curry">
         <Heading heading="Thai Curry Dishes" />
       </Element>
       {thaiCurryDishesArr.map((item) => {
@@ -424,7 +424,7 @@ function App() {
         );
       })}
 
-      <Element name="chicken">
+      <Element name="chicken" id="chicken">
         <Heading heading="Chicken Dishes" />
       </Element>
       {chickenDishesArr.map((item) => {
@@ -440,7 +440,7 @@ function App() {
         );
       })}
 
-      <Element name="pork">
+      <Element name="pork" id="pork">
         <Heading heading="Pork (Cha Siu) Dishes" />
       </Element>
       {porkDishesArr.map((item) => {
@@ -455,7 +455,7 @@ function App() {
         );
       })}
 
-      <Element name="beef">
+      <Element name="beef" id="beef">
         <Heading heading="Beef Dishes" />
       </Element>
       {beefDishesArr.map((item) => {
@@ -470,7 +470,7 @@ function App() {
         );
       })}
 
-      <Element name="duck">
+      <Element name="duck" id="duck">
         <Heading heading="Duck Dishes" />
       </Element>
       {duckDishesArr.map((item) => {
@@ -485,7 +485,7 @@ function App() {
         );
       })}
 
-      <Element name="king-prawn">
+      <Element name="king-prawn" id="king-prawn">
         <Heading heading="King Prawn Dishes" />
       </Element>
       {kingPrawnDishesArr.map((item) => {
@@ -500,7 +500,7 @@ function App() {
         );
       })}
 
-      <Element name="egg-foo-yung">
+      <Element name="egg-foo-yung" id="egg-foo-yung">
         <Heading heading="Egg Foo Yung Dishes" />
       </Element>
       {eggFooYungDishesArr.map((item) => {
@@ -515,7 +515,7 @@ function App() {
         );
       })}
 
-      <Element name="rice">
+      <Element name="rice" id="rice">
         <Heading heading="Rice Dishes" />
       </Element>
       {riceDishesArr.map((item) => {
@@ -530,7 +530,7 @@ function App() {
         );
       })}
 
-      <Element name="chow-mein">
+      <Element name="chow-mein" id="chow-mein">
         <Heading heading="Chow Mein Noodles Dishes" />
       </Element>
       {chowMeinDishesArr.map((item) => {
@@ -545,7 +545,7 @@ function App() {
         );
       })}
 
-      <Element name="vegetable">
+      <Element name="vegetable" id="vegetable">
         <Heading heading="Vegetable Dishes" />
       </Element>
       {vegetableDishesArr.map((item) => {
@@ -560,7 +560,7 @@ function App() {
         );
       })}
 
-      <Element name="side-dishes">
+      <Element name="side-dishes" id="side-dishes">
         <Heading heading="Side Dishes" />
       </Element>
       {sideDishesArr.map((item) => {
@@ -575,7 +575,7 @@ function App() {
         );
       })}
 
-      <Element name="desserts">
+      <Element name="desserts" id="desserts">
         <Heading heading="Desserts" />
       </Element>
       {dessertsArr.map((item) => {
@@ -590,7 +590,7 @@ function App() {
         );
       })}
 
-      <Element name="sauces">
+      <Element name="sauces" id="sauces">
         <Heading heading="Sauces" />
       </Element>
       {saucesArr.map((item) => {
@@ -612,7 +612,7 @@ function App() {
         mealBItems={mealDeal.mealBItems}
       />
 
-      <Element name="section-location" />
+      <Element name="section-location" id="section-location" />
       <Location />
 
       <Footer />
