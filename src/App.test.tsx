@@ -13,10 +13,10 @@ jest.mock("./components/contact/Contact", () =>
   jest.fn(() => <div>Contact Component</div>)
 );
 jest.mock("./components/special-item-box--purple/SpecialItemBoxPurple", () =>
-  jest.fn(() => <div>Special Item Box Purple</div>)
+  jest.fn(() => <div>Special Item Box Purple Component</div>)
 );
 jest.mock("./components/special-item-box--white/SpecialItemBoxWhite", () =>
-  jest.fn(() => <div>Special Item Box White</div>)
+  jest.fn(() => <div>Special Item Box White Component</div>)
 );
 jest.mock("./components/heading/Heading", () =>
   jest.fn(({ heading }) => <h2>{heading}</h2>)
@@ -35,62 +35,59 @@ jest.mock("./components/footer/Footer", () =>
 );
 
 describe("App Component", () => {
-  test("renders the App component correctly", () => {
+  test("Should render the website title correctly", () => {
     render(<App />);
 
-    // Check for title elements (with flexible text matching)
-    expect(screen.getByText(/Golden/i)).toBeInTheDocument();
-    expect(screen.getByText(/Wok -/i)).toBeInTheDocument();
-    expect(screen.getByText(/Chinese Takeaway/i)).toBeInTheDocument();
+    const titleElementPart1 = screen.getByText(/Golden/i);
+    const titleElementPart2 = screen.getByText(/Wok -/i);
+    const titleElementPart3 = screen.getByText(/Chinese Takeaway/i);
+    const iconElement = screen.getByText("Icon");
+    const mandarinElement = screen.getByText(/金锅/i);
 
-    // Check for Icon
-    expect(screen.getByText("Icon")).toBeInTheDocument();
-
-    // Check if Contact Component renders
-    expect(screen.getByText("Contact Component")).toBeInTheDocument();
-
-    // Check for Menu Navigation sections (use getAllByText for "Starters")
-    expect(screen.getAllByText("Starters")).toHaveLength(2); // One in the navigation, one in the section heading
-
-    // Check for Meal Deal component
-    expect(screen.getByText("Meal Deal Component")).toBeInTheDocument();
-
-    // Check if Footer renders
-    expect(screen.getByText("Footer Component")).toBeInTheDocument();
+    expect(titleElementPart1).toBeInTheDocument();
+    expect(titleElementPart2).toBeInTheDocument();
+    expect(titleElementPart3).toBeInTheDocument();
+    expect(iconElement).toBeInTheDocument();
+    expect(mandarinElement).toBeInTheDocument();
   });
 
-  test("renders navigation links", () => {
+  test("Should render the website sections", () => {
     render(<App />);
 
-    // Check for Contact link
-    expect(screen.getByText("Contact")).toBeInTheDocument();
+    const contactComponent = screen.getByText("Contact Component");
+    const specialItemBoxPurpleComponent = screen.getByText(
+      "Special Item Box Purple Component"
+    );
+    const specialItemBoxWhiteComponents = screen.getAllByText(
+      "Special Item Box White Component"
+    );
+    const mealDealComponent = screen.getByText("Meal Deal Component");
+    const locationComponent = screen.getByText("Location Component");
+    const footerComponent = screen.getByText("Footer Component");
 
-    // Check for Menu link
-    expect(screen.getByText("Menu")).toBeInTheDocument();
-
-    // Check for Location link
-    expect(screen.getByText("Location")).toBeInTheDocument();
+    expect(contactComponent).toBeInTheDocument();
+    expect(specialItemBoxPurpleComponent).toBeInTheDocument();
+    expect(specialItemBoxWhiteComponents).toHaveLength(2);
+    expect(mealDealComponent).toBeInTheDocument();
+    expect(locationComponent).toBeInTheDocument();
+    expect(footerComponent).toBeInTheDocument();
   });
 
-  test("renders special items", () => {
+  test("Should render page navigation links", () => {
     render(<App />);
 
-    // Check for Special Item components (handle multiple instances)
-    expect(screen.getByText("Special Item Box Purple")).toBeInTheDocument();
-    expect(screen.getAllByText("Special Item Box White")).toHaveLength(2); // Assuming two instances
+    const contactLink = screen.getByText("Contact");
+    const menuLink = screen.getByText("Menu");
+    const locationLink = screen.getByText("Location");
+
+    expect(contactLink).toBeInTheDocument();
+    expect(menuLink).toBeInTheDocument();
+    expect(locationLink).toBeInTheDocument();
   });
 
-  test("menu items are rendered", () => {
+  test("Should render menu navigation links", () => {
     render(<App />);
 
-    // Check for specific menu items (handle multiple instances)
-    expect(screen.getAllByText("Starters")).toHaveLength(2); // One in the navigation, one in the section
-  });
-
-  test("renders scroll links for categories", () => {
-    render(<App />);
-
-    // Use getByRole to find the link by its name
     expect(screen.getByRole("link", { name: "Starters" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Dim Sum" })).toBeInTheDocument();
     expect(
