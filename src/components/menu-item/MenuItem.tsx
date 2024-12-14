@@ -6,6 +6,7 @@ interface IProps {
   quantity?: number | null;
   price: number;
   description?: string | null;
+  icon?: string | null;
 }
 
 const MenuItem = (props: IProps) => {
@@ -58,10 +59,9 @@ const MenuItem = (props: IProps) => {
               <p className={classes[`${itemClass}`]}>
                 <span className="list-marker">{props.number}.</span>
 
-                {`${props.name} ${`(${props.quantity})`}`.padEnd(
-                  dotLength,
-                  "."
-                )}
+                {`${props.name} ${`(${props.quantity}) ${
+                  props.icon !== null ? props.icon : ""
+                }`}`.padEnd(dotLength, ".")}
 
                 {`£${props.price.toFixed(2)}`}
               </p>
@@ -70,7 +70,9 @@ const MenuItem = (props: IProps) => {
             <pre>
               <p className={classes[`${itemClass}`]}>
                 {spanNumberElement}
-                {`${props.name}`.padEnd(dotLength, ".")}
+                {`${props.name} ${
+                  props.icon !== null ? props.icon : ""
+                }`.padEnd(dotLength, ".")}
                 {`£${props.price.toFixed(2)}`}
               </p>
             </pre>

@@ -319,7 +319,9 @@ function App() {
             <MenuItem
               number={item.number}
               name={item.name}
+              icon={item.icon}
               price={item.price}
+              description={item.description}
               key={item.number + item.name}
             />
           );
@@ -328,8 +330,10 @@ function App() {
             <MenuItem
               number={item.number}
               name={item.name}
+              icon={item.icon}
               quantity={item.quantity}
               price={item.price}
+              description={item.description}
               key={item.number + item.name}
             />
           );
@@ -344,7 +348,9 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -358,6 +364,7 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             description={item.description}
             key={item.number + item.name}
@@ -373,7 +380,9 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -387,8 +396,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -402,8 +413,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -417,8 +430,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -432,6 +447,7 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
             description={item.description}
@@ -448,8 +464,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -463,8 +481,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -478,8 +498,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -493,8 +515,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -508,8 +532,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -523,8 +549,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -538,8 +566,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -553,8 +583,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -568,8 +600,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -583,8 +617,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
@@ -598,8 +634,10 @@ function App() {
           <MenuItem
             number={item.number}
             name={item.name}
+            icon={item.icon}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             key={item.number + item.name}
           />
         );
