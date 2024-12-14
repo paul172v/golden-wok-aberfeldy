@@ -20,12 +20,44 @@
 .item {
   font-size: 2.2rem;
 
-  &--single {
+  &--no-icon {
+    font-size: 2.2rem;
+  }
+
+  &--single--no-icon {
     font-size: 2.2rem;
     padding-left: 2rem;
   }
 
-  &--double {
+  &--double--no-icon {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+  }
+
+  &--one-icon {
+    font-size: 2.2rem;
+  }
+
+  &--single--one-icon {
+    font-size: 2.2rem;
+    padding-left: 1.5rem;
+  }
+
+  &--double--one-icon {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+  }
+
+  &--two-icon {
+    font-size: 2.2rem;
+  }
+
+  &--single--two-icon {
+    font-size: 2.2rem;
+    padding-left: 0.5rem;
+  }
+
+  &--double--two-icon {
     font-size: 2.2rem;
     padding-left: 1rem;
   }
@@ -43,17 +75,23 @@
 }
 
 @media (max-width: 490px) {
-  .item--double,
-  .item--single,
-  .item {
+  .item--double--no-icon,
+  .item--single--no-icon,
+  .item--no-icon,
+  .item--double--one-icon,
+  .item--single--one-icon,
+  .item--one-icon,
+  .item--double--two-icon,
+  .item--single--two-icon,
+  .item--two-icon {
     font-size: 2rem;
   }
 
-  .item--single {
+  .item--single--no-icon {
     padding-left: 1rem;
   }
 
-  .item--double {
+  .item--double--no-icon {
     padding-left: 0.5rem;
   }
 

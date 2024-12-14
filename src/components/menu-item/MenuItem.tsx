@@ -6,13 +6,14 @@ interface IProps {
   quantity?: number | null;
   price: number;
   description?: string | null;
-  icon?: string | null;
+  icon: string | null;
 }
 
 const MenuItem = (props: IProps) => {
-  //// Adjusting the padEnd dots according to the number and price
+  //// Adjusting the padEnd dots according to the number and price and icon length
   let dotLength;
   dotLength = 55;
+
   props.number < 10 && dotLength;
   props.number === 46 && dotLength++;
   props.number >= 100 && dotLength;
@@ -20,11 +21,56 @@ const MenuItem = (props: IProps) => {
   props.number >= 123 && dotLength--;
   props.price > 9 && dotLength--;
 
-  //// Selecting item class based on item number (the padding will align the menu items)
+  //// Selecting item class based on item number and icon type (the padding will align the menu items)
   let itemClass;
-  if (props.number < 10) itemClass = "item--single";
-  if (props.number >= 10 && props.number < 100) itemClass = "item--double";
-  if (props.number >= 100) itemClass = "item";
+
+  // no icon
+  if (props.number < 10 && !props.icon) itemClass = "item--single--no-icon";
+  if (props.number >= 10 && props.number < 100 && !props.icon)
+    itemClass = "item--double--no-icon";
+  if (props.number >= 100 && !props.icon) itemClass = "item--no-icon";
+
+  // one icon
+  if (
+    props.number < 10 &&
+    props.icon !== null &&
+    (props.icon === "🥜" || props.icon === "🌶️")
+  )
+    itemClass = "item--single--one-icon";
+  if (
+    props.number >= 10 &&
+    props.number < 100 &&
+    props.icon !== null &&
+    (props.icon === "🥜" || props.icon === "🌶️")
+  )
+    itemClass = "item--double--one-icon";
+  if (
+    props.number >= 100 &&
+    props.icon !== null &&
+    (props.icon === "🥜" || props.icon === "🌶️")
+  )
+    itemClass = "item--one-icon";
+
+  // two icon
+  if (
+    props.number < 10 &&
+    props.icon !== null &&
+    (props.icon === "🌶️🥜" || props.icon === "🥜🌶️" || props.icon === "🌶️🌶️")
+  )
+    itemClass = "item--single--two-icon";
+  if (
+    props.number >= 10 &&
+    props.number < 100 &&
+    props.icon !== null &&
+    (props.icon === "🌶️🥜" || props.icon === "🥜🌶️" || props.icon === "🌶️🌶️")
+  )
+    itemClass = "item--double--two-icon";
+  if (
+    props.number >= 100 &&
+    props.icon !== null &&
+    (props.icon === "🌶️🥜" || props.icon === "🥜🌶️" || props.icon === "🌶️🌶️")
+  )
+    itemClass = "item--two-icon";
 
   //// Adjusting padding for letter markers a,b,c, next to the item number
   let spanNumberElement = <span className="list-marker">{props.number}.</span>;
@@ -50,6 +96,7 @@ const MenuItem = (props: IProps) => {
       <span className="list-marker--letter">{props.number}c.</span>
     );
   }
+
   return (
     <div className={classes.page}>
       <div className={classes["outer-wrapper"]}>
