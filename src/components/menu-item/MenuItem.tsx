@@ -12,7 +12,11 @@ interface IProps {
 const MenuItem = (props: IProps) => {
   //// Adjusting the padEnd dots according to the number and price and icon length
   let dotLength;
+
   dotLength = 55;
+
+  if (props.icon === "🥜") dotLength = 55;
+  if (props.icon === "🌶️🌶️") dotLength = 56;
 
   props.number < 10 && dotLength;
   props.number === 46 && dotLength++;
@@ -30,26 +34,31 @@ const MenuItem = (props: IProps) => {
     itemClass = "item--double--no-icon";
   if (props.number >= 100 && !props.icon) itemClass = "item--no-icon";
 
-  // one icon
-  if (
-    props.number < 10 &&
-    props.icon !== null &&
-    (props.icon === "🥜" || props.icon === "🌶️")
-  )
-    itemClass = "item--single--one-icon";
+  // one icon - nut
+  if (props.number < 10 && props.icon !== null && props.icon === "🥜")
+    itemClass = "item--single--one-icon-nut";
   if (
     props.number >= 10 &&
     props.number < 100 &&
     props.icon !== null &&
-    (props.icon === "🥜" || props.icon === "🌶️")
+    props.icon === "🥜"
   )
-    itemClass = "item--double--one-icon";
+    itemClass = "item--double--one-icon-nut";
+  if (props.number >= 100 && props.icon !== null && props.icon === "🥜")
+    itemClass = "item--one-icon-nut";
+
+  // one icon - hot
+  if (props.number < 10 && props.icon !== null && props.icon === "🌶️")
+    itemClass = "item--single--one-icon-hot";
   if (
-    props.number >= 100 &&
+    props.number >= 10 &&
+    props.number < 100 &&
     props.icon !== null &&
-    (props.icon === "🥜" || props.icon === "🌶️")
+    props.icon === "🌶️"
   )
-    itemClass = "item--one-icon";
+    itemClass = "item--double--one-icon-hot";
+  if (props.number >= 100 && props.icon !== null && props.icon === "🌶️")
+    itemClass = "item--one-icon-hot";
 
   // two icon
   if (
@@ -97,6 +106,8 @@ const MenuItem = (props: IProps) => {
     );
   }
 
+  const iconRules = props.icon === null || props.icon === "" ? "" : props.icon;
+
   return (
     <div className={classes.page}>
       <div className={classes["outer-wrapper"]}>
@@ -106,9 +117,10 @@ const MenuItem = (props: IProps) => {
               <p className={classes[`${itemClass}`]}>
                 <span className="list-marker">{props.number}.</span>
 
-                {`${props.name} ${`(${props.quantity}) ${
-                  props.icon !== null ? props.icon : ""
-                }`}`.padEnd(dotLength, ".")}
+                {`${props.name} ${`(${props.quantity}) ${iconRules}`}`.padEnd(
+                  dotLength,
+                  "."
+                )}
 
                 {`£${props.price.toFixed(2)}`}
               </p>

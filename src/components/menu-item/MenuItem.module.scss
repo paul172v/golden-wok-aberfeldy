@@ -34,17 +34,31 @@
     padding-left: 1rem;
   }
 
-  &--one-icon {
+  &--one-icon-nut {
     font-size: 2.2rem;
   }
 
-  &--single--one-icon {
+  &--single--one-icon-nut {
     font-size: 2.2rem;
     padding-left: 1.5rem;
   }
 
-  &--double--one-icon {
-    font-size: 2.2rem;
+  &--double--one-icon-nut {
+    font-size: 2.185rem;
+    padding-left: 1rem;
+  }
+
+  &--one-icon-hot {
+    font-size: 2.225rem;
+  }
+
+  &--single--one-icon-hot {
+    font-size: 2.225rem;
+    padding-left: 1.5rem;
+  }
+
+  &--double--one-icon-hot {
+    font-size: 2.225rem;
     padding-left: 1rem;
   }
 
@@ -78,21 +92,16 @@
   .item--double--no-icon,
   .item--single--no-icon,
   .item--no-icon,
-  .item--double--one-icon,
-  .item--single--one-icon,
-  .item--one-icon,
+  .item--double--one-icon-nut,
+  .item--single--one-icon-nut,
+  .item--one-icon-nut,
+  .item--double--one-icon-hot,
+  .item--single--one-icon-hot,
+  .item--one-icon-hot,
   .item--double--two-icon,
   .item--single--two-icon,
   .item--two-icon {
     font-size: 2rem;
-  }
-
-  .item--single--no-icon {
-    padding-left: 1rem;
-  }
-
-  .item--double--no-icon {
-    padding-left: 0.5rem;
   }
 
   .description {
